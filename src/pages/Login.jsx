@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
@@ -33,7 +33,8 @@ const Login = () => {
   const handleFacebookLogIn = () => {
     facebookLogIn()
       .then((result) => {
-        console.log(result.user);
+        const currentUser = result.user;
+        setUser(currentUser);
       })
       .catch((error) => {
         console.error(error);
@@ -111,7 +112,7 @@ const Login = () => {
             onClick={handleFacebookLogIn}
             className="p-3 rounded-sm"
           >
-            <FaTwitter></FaTwitter>
+            <FaFacebook></FaFacebook>
           </button>
           <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
             <FaGithub></FaGithub>
