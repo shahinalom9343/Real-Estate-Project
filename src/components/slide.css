@@ -1,0 +1,21 @@
+.slide {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.slide1 {
+  background-image: url("../assets/banner-image1.jpg");
+}
+.slide2 {
+  background-image: url("../assets/banner-image2.jpg");
+}
+.slide3 {
+  background-image: url("../assets/banner-image3.jpg");
+}
