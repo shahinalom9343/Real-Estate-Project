@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -9,6 +9,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { signIn, googleLogIn, facebookLogIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [user, setUser] = useState(null);
   const handleLogIn = (e) => {
@@ -18,6 +20,7 @@ const Login = () => {
     const password = form.get("password");
     // console.log(email, password);
     signIn(email, password);
+    navigate(location?.state ? location.state : "/login");
   };
 
   const handleGoogleLogIn = () => {
