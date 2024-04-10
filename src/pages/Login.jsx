@@ -20,7 +20,7 @@ const Login = () => {
     const password = form.get("password");
     // console.log(email, password);
     signIn(email, password);
-    navigate(location?.state ? location.state : "/login");
+    navigate(location?.state ? location.state : "/");
   };
 
   const handleGoogleLogIn = () => {

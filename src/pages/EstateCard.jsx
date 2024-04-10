@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EstateCard = ({ singleEstate }) => {
   const {
     image,
@@ -22,7 +24,7 @@ const EstateCard = ({ singleEstate }) => {
           <h3 className="text-base font-semibold">Segment : {segment_name}</h3>
           <p>
             {description.slice(0, 120)} ..{" "}
-            <button className="text-sm text-fuchsia-500">see more</button>
+            <button className="text-sm text-fuchsia-700">See more</button>
           </p>
           <div className="flex gap-10">
             <p>Price : {price}</p>
@@ -32,7 +34,9 @@ const EstateCard = ({ singleEstate }) => {
 
           <p className="text-start">Location:{location}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary w-full">View Property</button>
+            <Link to={`/estate/${id}`} className="btn btn-primary w-full">
+              View Property
+            </Link>
           </div>
         </div>
       </div>
