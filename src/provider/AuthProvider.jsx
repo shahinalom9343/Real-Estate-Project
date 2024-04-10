@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
   const [user, setUser] = useState(null);
+  // console.log(user);
   const [loading, setLoading] = useState(true);
 
   const createUser = (email, password) => {

@@ -68,7 +68,6 @@ const Navbar = () => {
             <img
               src={user.photoURL || user.photoUrl}
               className="rounded-full h-10 w-10 "
-              data-tip="hello"
             />
             <Link to="/login" onClick={handleSignOut} className="btn">
               Log Out
