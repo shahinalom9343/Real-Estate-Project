@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 const MainLayout = () => {
   return (
-    <div className="max-w-7xl mx-auto font-merriweather">
+    <div className="max-w-7xl mx-auto font-montserrat">
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>

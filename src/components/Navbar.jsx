@@ -28,7 +28,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar shadow-sm  bg-cyan-200 rounded-lg">
+    <div className="navbar shadow-sm  bg-cyan-200 rounded-lg font-merriweather">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,7 +54,9 @@ const Navbar = () => {
             {listItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-lg lg:text-xl">Axis Commercial</a>
+        <a className="btn btn-ghost text-lg lg:text-xl text-orange-600 font-bold">
+          Axis Commercial
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-2">{listItems}</ul>

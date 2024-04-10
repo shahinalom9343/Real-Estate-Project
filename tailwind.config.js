@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         merriweather: " 'Merriweather', serif",
+        montserrat: "font-family: 'Montserrat', sans-serif;",
       },
     },
   },
