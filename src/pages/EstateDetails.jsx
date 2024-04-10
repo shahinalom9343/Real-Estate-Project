@@ -11,15 +11,15 @@ const EstateDetails = () => {
       <Helmet>
         <title>Axis Commercial | Estate Details</title>
       </Helmet>
-      <div className="card  card-side bg-base-100 grid grid-cols-3 gap-6 px-4">
+      <div className="card  card-side bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-2 lg:px-4">
         <div className="col-span-1 flex justify-center items-center ">
           <img className="h-4/5" src={estate.image} />
         </div>
-        <div className="card-body col-span-2">
+        <div className="card-body col-span-1 lg:col-span-2">
           <h2 className="card-title">{estate.estate_title}</h2>
-          <p>{estate.description}</p>
+          <p className="text-justify"> {estate.description}</p>
           <p>Location :{estate.location}</p>
-          <div className="card-actions justify-end">Status:{estate.status}</div>
+          <div className="font-bold">Status:{estate.status}</div>
         </div>
       </div>
     </div>

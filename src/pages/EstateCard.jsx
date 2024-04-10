@@ -15,25 +15,26 @@ const EstateCard = ({ singleEstate }) => {
   } = singleEstate;
   return (
     <div>
-      <div className="card card-compact w-full  bg-base-300  h-[500px]">
+      <div className="card card-compact w-full  bg-base-300  h-[290px">
         <figure>
           <img className="h-52 w-full" src={image} alt={estate_name} />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-purple-600">{estate_title}</h2>
-          <h3 className="text-base font-semibold">Segment : {segment_name}</h3>
-          <p>
-            {description.slice(0, 120)} ..{" "}
-            <button className="text-sm text-fuchsia-700">See more</button>
-          </p>
-          <div className="flex gap-10">
-            <p>Price : {price}</p>
-            <p>({status})</p>
-          </div>
-          <p>Area : {area_sq_ft} sq.ft</p>
 
-          <p className="text-start">Location:{location}</p>
-          <div className="card-actions justify-end">
+          <div>
+            <p>
+              {description.slice(0, 120)} ..{" "}
+              <button className="text-sm text-fuchsia-700">See more</button>
+            </p>
+          </div>
+          <div>
+            <p>Area : {area_sq_ft} sq.ft</p>
+          </div>
+          <div>
+            <p className="text-start">Location:{location}</p>
+          </div>
+          <div className="">
             <Link to={`/estate/${id}`} className="btn btn-primary w-full">
               View Property
             </Link>

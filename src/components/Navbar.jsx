@@ -54,7 +54,7 @@ const Navbar = () => {
             {listItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-lg lg:text-xl text-orange-600 font-bold">
+        <a className="btn btn-ghost text-sm md:text-xl text-orange-600 font-bold">
           Axis Commercial
         </a>
       </div>
