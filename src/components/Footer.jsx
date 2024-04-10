@@ -3,33 +3,35 @@ import { FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content bottom-0">
+      <footer className="footer px-6 py-2 lg:px-16 lg:py-6 bg-base-200 text-base-content bottom-0">
         <nav>
-          <h6 className="footer-title">Services</h6>
+          <h5 className="footer-title">Services</h5>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
+
           <a className="link link-hover">Advertisement</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
+          <h5 className="footer-title">Company</h5>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
         </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6>
+          <h5 className="footer-title">Legal</h5>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer px-4 lg:px-16 py-1 lg:py-4 border-t bg-base-200 text-base-content border-base-300">
         <aside className="items-center grid-flow-col">
           <img src={"/public/building.png"} className="h-\7 w-7" alt="" />
           <p>
-            Where dream becomes reality <br />
+            <span className="text-orange-500 font-bold text-base">
+              Axis Commercial
+            </span>{" "}
+            | Where dream becomes reality <br />
             Copyright &copy; reserved 2024.
           </p>
         </aside>

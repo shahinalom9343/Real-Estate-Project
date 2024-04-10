@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import profile from "../assets/profile.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -17,18 +18,15 @@ const Navbar = () => {
         <NavLink to="/about">About</NavLink>
       </li>
       <li>
-        <NavLink to="/services">Our Services</NavLink>
+        <NavLink to="/profile">User Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/profile">Update Profile</NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact">Contact Us</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar shadow-sm  bg-cyan-200 rounded-lg font-merriweather">
+    <div className="navbar shadow-sm  bg-red-50 rounded-lg font-merriweather uppercase">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,17 +47,22 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-50 rounded-box w-52"
+            className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-50 rounded-box w-52 font-bold"
           >
             {listItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-sm md:text-xl text-orange-600 font-bold">
-          Axis Commercial
-        </a>
+        <Link to="/" className="btn btn-ghost relative">
+          <div className="h-6 w-6 absolute top-2 left-0">
+            <img src={profile} alt="" />
+          </div>
+          <div className="relative left-2 md:left-4 text-base md:text-2xl  font-extrabold bg-gradient-to-r from-pink-600 via-lime-500 to-orange-500 inline-block text-transparent bg-clip-text">
+            Axis Commercial
+          </div>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-2">{listItems}</ul>
+        <ul className="menu menu-horizontal px-2 font-bold">{listItems}</ul>
       </div>
 
       <div className="navbar-end">
@@ -69,13 +72,17 @@ const Navbar = () => {
               src={user.photoURL || user.photoUrl}
               className="rounded-full h-10 w-10 "
             />
-            <Link to="/login" onClick={handleSignOut} className="btn">
-              Log Out
+            <Link to="/login" onClick={handleSignOut}>
+              <button className="px-4 py-2 rounded-3xl text-white bg-black font-medium bg-opacity-70">
+                Log out
+              </button>
             </Link>
           </label>
         ) : (
-          <Link to="/login" className="btn">
-            Login
+          <Link to="/login">
+            <button className="px-2 md:px-4 py-1 md:py-2 rounded-3xl text-white bg-black font-normal md:font-medium bg-opacity-70">
+              Login
+            </button>
           </Link>
         )}
       </div>

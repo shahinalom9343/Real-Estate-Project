@@ -7,9 +7,9 @@ const Team = () => {
             Our team
           </h1>
           <p className="max-w-2xl text-center dark:text-gray-600">
-            At a assumenda quas cum earum ut itaque commodi saepe rem aspernatur
-            quam natus quis nihil quod, hic explicabo doloribus magnam neque,
-            exercitationem eius sunt!
+            We are always on the lookout for the next great fit for our team!
+            Here are ten great reasons why you should consider a career with Mad
+            City Dream commercial aspects. Here we are always for you.
           </p>
           <div className="flex flex-row flex-wrap-reverse justify-center">
             <div className="flex flex-col justify-center m-8 text-center">

@@ -10,7 +10,7 @@ const Profile = () => {
         <title>Axis Commercial | User Profile</title>
       </Helmet>
       {user && (
-        <div className="flex flex-col justify-center max-w-xl my-10 mx-auto p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex flex-col justify-center max-w-xl md:my-20 mx-auto p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
           <img
             src={user.photoURL}
             alt={user.displayName}

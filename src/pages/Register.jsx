@@ -9,6 +9,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);

@@ -14,7 +14,7 @@ const Contact = () => {
               Fill in the form to start a conversation
             </p>
             <div className="space-y-4">
-              <p className="flex items-center">
+              <p className="flex items-center text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -27,9 +27,9 @@ const Contact = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span>Fake address, 9999 City</span>
+                <span>New York City , USA</span>
               </p>
-              <p className="flex items-center">
+              <p className="flex items-center text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -38,9 +38,9 @@ const Contact = () => {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                 </svg>
-                <span>123456789</span>
+                <span>+8801738672464</span>
               </p>
-              <p className="flex items-center">
+              <p className="flex items-center text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -50,7 +50,7 @@ const Contact = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
-                <span>contact@business.com</span>
+                <span>cuet.shahin.eee12@gmail.com</span>
               </p>
             </div>
           </div>
@@ -62,31 +62,26 @@ const Contact = () => {
               <span className="mb-1">Full name</span>
               <input
                 type="text"
-                placeholder="Leroy Jenkins"
-                className="block w-full p-2 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
+                placeholder="Enter your name"
+                className="block w-full p-2 rounded-md border-2 focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
               />
             </label>
             <label className="block">
               <span className="mb-1">Email address</span>
               <input
                 type="email"
-                placeholder="leroy@jenkins.com"
-                className="block w-full p-2 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
+                placeholder="abc@example.com"
+                className="block w-full p-2 rounded-md border-2 focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
               />
             </label>
             <label className="block">
-              <span className="mb-1">Message</span>
+              <span className="mb-1 ">Message</span>
               <textarea
                 rows="3"
                 className="block w-full  p-2 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
               ></textarea>
             </label>
-            <button
-              type="button"
-              className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600"
-            >
-              Submit
-            </button>
+            <button className="btn btn-accent w-full">Submit</button>
           </form>
         </div>
       </section>
