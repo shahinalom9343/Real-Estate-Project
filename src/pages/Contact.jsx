@@ -14,7 +14,7 @@ const Contact = () => {
               Fill in the form to start a conversation
             </p>
             <div className="space-y-4">
-              <p className="flex items-center text-2xl">
+              <p className="flex items-center md:text-xl ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -29,7 +29,7 @@ const Contact = () => {
                 </svg>
                 <span>New York City , USA</span>
               </p>
-              <p className="flex items-center text-2xl">
+              <p className="flex items-center md:text-xl ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -40,7 +40,7 @@ const Contact = () => {
                 </svg>
                 <span>+8801738672464</span>
               </p>
-              <p className="flex items-center text-2xl">
+              <p className="flex items-center md:text-xl ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -78,7 +78,7 @@ const Contact = () => {
               <span className="mb-1 ">Message</span>
               <textarea
                 rows="3"
-                className="block w-full  p-2 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
+                className="block w-full border-2 p-2 rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"
               ></textarea>
             </label>
             <button className="btn btn-accent w-full">Submit</button>

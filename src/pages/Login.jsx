@@ -48,8 +48,10 @@ const Login = () => {
       <Helmet>
         <title>Axis Commercial | Login</title>
       </Helmet>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50">
-        <h1 className="text-2xl font-bold text-center">Login Here</h1>
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50 animate__animated animate__fadeInRight">
+        <h1 className="text-2xl font-bold text-center text-blue-500">
+          Login Here
+        </h1>
         <form className="space-y-6" onSubmit={handleLogIn}>
           <div className="space-y-1 text-sm">
             <label
@@ -91,7 +93,7 @@ const Login = () => {
               </a>
             </div>
           </div>
-          <button className="block w-full bg-green-300 font-bold p-3 text-center rounded-xl dark:text-white dark:bg-violet-600">
+          <button className="block w-full bg-orange-500 font-bold p-3 text-center rounded-xl text-white dark:bg-violet-600">
             Sign in
           </button>
         </form>

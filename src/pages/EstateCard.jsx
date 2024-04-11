@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "animate.css";
 
 const EstateCard = ({ singleEstate }) => {
   const {
@@ -14,28 +15,38 @@ const EstateCard = ({ singleEstate }) => {
     location,
   } = singleEstate;
   return (
-    <div>
-      <div className="card card-compact w-full  bg-base-300  h-[290px">
+    <div className="animate__animated animate__fadeInUp">
+      <div className="card card-compact w-full  bg-red-200 transition duration-300 ease-in-out hover:scale-105">
         <figure>
           <img className="h-52 w-full" src={image} alt={estate_name} />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-purple-600">{estate_title}</h2>
+          <h2 className="card-title text-purple-700">{estate_title}</h2>
 
           <div>
             <p>
               {description.slice(0, 120)} ..{" "}
-              <button className="text-sm text-fuchsia-700">See more</button>
+              <button className="text-sm text-fuchsia-700 font-bold">
+                See more
+              </button>
             </p>
           </div>
           <div>
-            <p>Area : {area_sq_ft} sq.ft</p>
+            <p>
+              <span className="font-bold">Area :</span> {area_sq_ft} sq.ft
+            </p>
           </div>
           <div>
-            <p className="text-start">Location:{location}</p>
+            <p className="text-start">
+              <span className="font-bold">Location :</span>
+              {location}
+            </p>
           </div>
-          <div className="">
-            <Link to={`/estate/${id}`} className="btn btn-primary w-full">
+          <div>
+            <Link
+              to={`/estate/${id}`}
+              className="btn btn-accent text-white w-full font-semibold text-base"
+            >
               View Property
             </Link>
           </div>

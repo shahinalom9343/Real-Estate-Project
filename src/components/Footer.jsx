@@ -7,15 +7,21 @@ const Footer = () => {
         <nav>
           <h5 className="footer-title">Services</h5>
           <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
+          <Link to="/" className="link link-hover">
+            Design
+          </Link>
 
           <a className="link link-hover">Advertisement</a>
         </nav>
         <nav>
           <h5 className="footer-title">Company</h5>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
+          <Link to="/about" className="link link-hover">
+            About us
+          </Link>
+          <Link to="/contact" className="link link-hover">
+            Contact
+          </Link>
+          <a className="link link-hover">Carrer</a>
         </nav>
         <nav>
           <h5 className="footer-title">Legal</h5>

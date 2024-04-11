@@ -53,7 +53,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost relative">
-          <div className="h-6 w-6 absolute top-2 left-0">
+          <div className="md:h-6 md:w-6 md:absolute md:top-2 left-0 md:block hidden">
             <img src={profile} alt="" />
           </div>
           <div className="relative left-2 md:left-4 text-base md:text-2xl  font-extrabold bg-gradient-to-r from-pink-600 via-lime-500 to-orange-500 inline-block text-transparent bg-clip-text">
@@ -73,14 +73,14 @@ const Navbar = () => {
               className="rounded-full h-10 w-10 "
             />
             <Link to="/login" onClick={handleSignOut}>
-              <button className="px-4 py-2 rounded-3xl text-white bg-black font-medium bg-opacity-70">
+              <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white bg-black font-medium bg-opacity-70">
                 Log out
               </button>
             </Link>
           </label>
         ) : (
           <Link to="/login">
-            <button className="px-2 md:px-4 py-1 md:py-2 rounded-3xl text-white bg-black font-normal md:font-medium bg-opacity-70">
+            <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white   bg-black font-normal md:font-medium bg-opacity-70">
               Login
             </button>
           </Link>

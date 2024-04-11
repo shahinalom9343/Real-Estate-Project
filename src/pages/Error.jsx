@@ -22,7 +22,7 @@ const Error = () => {
             </p>
             <Link
               to="/"
-              className="px-8 py-3 font-semibold  dark:bg-violet-600 dark:text-gray-50 border-2 bg-green-500 rounded-xl"
+              className="px-8 py-3 font-semibold  dark:bg-violet-600 dark:text-gray-50 border-2 bg-green-500 rounded-xl text-white"
             >
               Back to homepage
             </Link>

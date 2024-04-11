@@ -19,9 +19,9 @@ const Team = () => {
                 src="https://source.unsplash.com/100x100/?portrait?0"
               />
               <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
+                Abdur Rahman
               </p>
-              <p className="dark:text-gray-600">Visual Designer</p>
+              <p className="dark:text-gray-600">Arch. Engineer</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -29,9 +29,7 @@ const Team = () => {
                 className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                 src="https://source.unsplash.com/100x100/?portrait?1"
               />
-              <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
-              </p>
+              <p className="text-xl font-semibold leading-tight">Shahin Alom</p>
               <p className="dark:text-gray-600">Visual Designer</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
@@ -41,9 +39,9 @@ const Team = () => {
                 src="https://source.unsplash.com/100x100/?portrait?2"
               />
               <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
+                Tanvir Akhter
               </p>
-              <p className="dark:text-gray-600">Visual Designer</p>
+              <p className="dark:text-gray-600">Graphics Designer</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -52,9 +50,9 @@ const Team = () => {
                 src="https://source.unsplash.com/100x100/?portrait?3"
               />
               <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
+                shafayat Hasan
               </p>
-              <p className="dark:text-gray-600">Visual Designer</p>
+              <p className="dark:text-gray-600">Project Engineer</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -62,10 +60,8 @@ const Team = () => {
                 className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                 src="https://source.unsplash.com/100x100/?portrait?4"
               />
-              <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
-              </p>
-              <p className="dark:text-gray-600">Visual Designer</p>
+              <p className="text-xl font-semibold leading-tight">Abdul Aziz</p>
+              <p className="dark:text-gray-600">Project Co-ordinator</p>
             </div>
             <div className="flex flex-col justify-center m-8 text-center">
               <img
@@ -73,10 +69,8 @@ const Team = () => {
                 className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                 src="https://source.unsplash.com/100x100/?portrait?5"
               />
-              <p className="text-xl font-semibold leading-tight">
-                Leroy Jenkins
-              </p>
-              <p className="dark:text-gray-600">Visual Designer</p>
+              <p className="text-xl font-semibold leading-tight">John kims</p>
+              <p className="dark:text-gray-600">Managing Director</p>
             </div>
           </div>
         </div>

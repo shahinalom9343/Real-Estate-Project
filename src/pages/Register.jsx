@@ -41,7 +41,9 @@ const Register = () => {
         <title>Axis Commercial | Register</title>
       </Helmet>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50">
-        <h1 className="text-2xl font-bold text-center">Please Register Here</h1>
+        <h1 className="text-2xl font-bold text-center text-orange-600">
+          Please Register Here
+        </h1>
         <form noValidate="" className="space-y-6" onSubmit={handleRegister}>
           <div className="space-y-1 text-sm">
             <label className="block dark:text-gray-600 font-bold ">Name:</label>
