@@ -1,8 +1,12 @@
-# React + Vite
+# Axis Commercial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Github-link : https://github.com/programming-hero-web-course-4/b9a9-real-estate-shahinalom9343
+Live website link : https://real-estate-project-173d3.web.app/
 
-Currently, two official plugins are available:
+Bulletpoint you may read :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. This website is a Real Estate project (Commercial Real Estate).
+2. You can find different Commercial Estate segment at our Home page.
+3. You can registar (Create account) and login (with google,facebook and github account) to allow access of our features.
+4. Clearing details of each segement of the Estate details segment.
+5. This can give you overall idea about a Real commercial real Estate if you explore our website. Thank You !!!
