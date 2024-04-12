@@ -2,12 +2,17 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Login = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { signIn, googleLogIn, facebookLogIn, githubLogIn } =
     useContext(AuthContext);
   const location = useLocation();
@@ -62,7 +67,11 @@ const Login = () => {
       <Helmet>
         <title>Axis Commercial | Login</title>
       </Helmet>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50 animate__animated animate__fadeInRight">
+      <div
+        className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50 "
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <h1 className="text-2xl font-bold text-center text-blue-500">
           Login Here
         </h1>

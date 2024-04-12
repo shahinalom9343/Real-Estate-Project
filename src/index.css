@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .body {
-  background-color: antiquewhite;
-} */
+.body {
+  background-image: url("/public/aaa.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

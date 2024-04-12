@@ -1,14 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Register = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -29,7 +34,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast("Registration Successful !!!");
+        toast("User Created Successfully !!!");
       })
       .catch((error) => {
         console.error(error);
@@ -40,7 +45,11 @@ const Register = () => {
       <Helmet>
         <title>Axis Commercial | Register</title>
       </Helmet>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50">
+      <div
+        className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto bg-slate-50"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
         <h1 className="text-2xl font-bold text-center text-orange-600">
           Please Register Here
         </h1>
@@ -51,6 +60,7 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Your Name"
+              required
               className="w-full px-4 py-3 border-2 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
           </div>

@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="md:h-6 md:w-6 md:absolute md:top-2 left-0 md:block hidden">
             <img src={profile} alt="" />
           </div>
-          <div className="relative left-2 md:left-4 text-base md:text-2xl  font-extrabold bg-gradient-to-r from-pink-600 via-lime-500 to-orange-500 inline-block text-transparent bg-clip-text">
+          <div className="relative md:left-4 text-base md:text-2xl  font-extrabold bg-gradient-to-r from-pink-600 via-lime-500 to-orange-500 inline-block text-transparent bg-clip-text">
             Axis Commercial
           </div>
         </Link>
@@ -67,20 +67,28 @@ const Navbar = () => {
 
       <div className="navbar-end">
         {user ? (
-          <label htmlFor="" className="flex justify-center items-center gap-2 ">
-            <img
-              src={user.photoURL || user.photoUrl}
-              className="rounded-full h-10 w-10 "
-            />
+          <label
+            htmlFor=""
+            className="flex justify-center items-center md:gap-2 md:flex-row flex-col-reverse "
+          >
+            <button
+              className=" tooltip tooltip-bottom"
+              data-tip={user.displayName}
+            >
+              <img
+                src={user ? user?.photoURL : ""}
+                className="rounded-full h-10 w-10"
+              />
+            </button>
             <Link to="/login" onClick={handleSignOut}>
-              <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white bg-black font-medium bg-opacity-70">
+              <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white bg-black  md:font-medium bg-opacity-70">
                 Log out
               </button>
             </Link>
           </label>
         ) : (
           <Link to="/login">
-            <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white   bg-black font-normal md:font-medium bg-opacity-70">
+            <button className="px-1 md:px-4 py-1 md:py-2 rounded-3xl text-white   bg-black font-thin md:font-medium bg-opacity-70">
               Login
             </button>
           </Link>

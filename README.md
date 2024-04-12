@@ -10,3 +10,7 @@ Bulletpoint you may read :
 3. You can registar (Create account) and login (with google,facebook and github account) to allow access of our features.
 4. Clearing details of each segement of the Estate details segment.
 5. This can give you overall idea about a Real commercial real Estate if you explore our website. Thank You !!!
+6. Used npm Packages are :
+   a. AOS Package
+   b.Animate.css
+   c.Swiper Slider

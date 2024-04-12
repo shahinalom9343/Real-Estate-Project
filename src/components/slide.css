@@ -1,5 +1,5 @@
 .slide {
-  height: 70vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,10 +12,13 @@
 }
 .slide1 {
   background-image: url("https://www.boyercompany.com/wp-content/uploads/2022/02/Weave-Lehi-utah-real-estate-boyer-company.jpg");
+  opacity: 0.7;
 }
 .slide2 {
   background-image: url("https://minteerteam.com/wp-content/uploads/2022/03/EVO-Entertainment-Center.jpg");
+  opacity: 0.7;
 }
 .slide3 {
   background-image: url("https://res.cloudinary.com/trends-publishing/image/upload/s--o4nDHKFY--/c_scale,dpr_2.0,g_center,w_320/e_anti_removal:10,g_south_east,l_trends_watermark,o_70,w_50,x_10,y_10/f_auto,q_auto:best/0057741.jpg");
+  opacity: 0.7;
 }

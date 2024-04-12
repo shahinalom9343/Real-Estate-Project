@@ -4,11 +4,15 @@ import { useLoaderData } from "react-router-dom";
 import EstateCard from "./EstateCard";
 import Team from "./Team";
 import Marquee from "react-fast-marquee";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const estates = useLoaderData();
   useEffect(() => {
     AOS.init();
@@ -38,7 +42,11 @@ const Home = () => {
         </div>
       </div>
       {/* Estate */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         {estates.map((singleEstate) => (
           <EstateCard
             key={singleEstate.id}
