@@ -8,7 +8,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();

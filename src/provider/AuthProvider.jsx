@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import {
   FacebookAuthProvider,
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -8,15 +9,18 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 
 import app from "../firebase/firebase.config";
+
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const [user, setUser] = useState(null);
   // console.log(user);
   const [loading, setLoading] = useState(true);
@@ -24,6 +28,14 @@ const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  // update the user profile
+  const updateUserProfile = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    });
   };
 
   const signIn = (email, password) => {
@@ -53,6 +65,9 @@ const AuthProvider = ({ children }) => {
   const facebookLogIn = () => {
     return signInWithPopup(auth, facebookProvider);
   };
+  const githubLogIn = () => {
+    return signInWithPopup(auth, githubProvider);
+  };
 
   const authInfo = {
     user,
@@ -62,6 +77,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     googleLogIn,
     facebookLogIn,
+    updateUserProfile,
+    githubLogIn,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

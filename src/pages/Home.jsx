@@ -4,10 +4,15 @@ import { useLoaderData } from "react-router-dom";
 import EstateCard from "./EstateCard";
 import Team from "./Team";
 import Marquee from "react-fast-marquee";
-import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
   const estates = useLoaderData();
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="my-10">
       <Helmet>
@@ -15,7 +20,9 @@ const Home = () => {
       </Helmet>
 
       {/* Banner */}
-      <Banner></Banner>
+      <div data-aos="slide-right">
+        <Banner></Banner>
+      </div>
       {/* marquee */}
       <div className="py-4 rounded-xl  hidden md:block">
         <div className="flex">

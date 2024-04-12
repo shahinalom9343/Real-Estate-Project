@@ -8,7 +8,8 @@ import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { signIn, googleLogIn, facebookLogIn } = useContext(AuthContext);
+  const { signIn, googleLogIn, facebookLogIn, githubLogIn } =
+    useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -28,6 +29,7 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -38,6 +40,18 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  const handleGithubLogIn = () => {
+    githubLogIn()
+      .then((result) => {
+        const currentUser = result.user;
+        setUser(currentUser);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -119,7 +133,11 @@ const Login = () => {
           >
             <FaFacebook></FaFacebook>
           </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+          <button
+            aria-label="Log in with GitHub"
+            onClick={handleGithubLogIn}
+            className="p-3 rounded-sm"
+          >
             <FaGithub></FaGithub>
           </button>
         </div>
