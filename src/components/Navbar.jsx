@@ -5,7 +5,7 @@ import profile from "../assets/profile.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  // console.log(user);
+  console.log(user);
   const handleSignOut = () => {
     logOut().then().catch();
   };
@@ -76,10 +76,13 @@ const Navbar = () => {
           >
             <button
               className=" tooltip tooltip-bottom"
-              data-tip={user.displayName}
+              data-tip={user?.displayName || "User name not Found"}
             >
               <img
-                src={user ? user?.photoURL : ""}
+                src={
+                  user?.photoURL ||
+                  "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                }
                 className="rounded-full h-10 w-10"
               />
             </button>

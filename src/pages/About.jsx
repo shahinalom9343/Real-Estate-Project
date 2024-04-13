@@ -1,6 +1,12 @@
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="md:px-6 px-4 my-4">
       <Helmet>
@@ -11,7 +17,11 @@ const About = () => {
           <p>About Us </p>
         </div>
         <div>
-          <p className="text-justify">
+          <p
+            className="text-justify"
+            data-aos="fade-down-left"
+            data-aos-duration="2000"
+          >
             <span className="text-xl font-semibold">At Axis Commercial</span>,
             we are dedicated to revolutionizing the way you experience
             [product/service]. With a steadfast commitment to excellence,
@@ -42,7 +52,11 @@ const About = () => {
           <p>Our History </p>
         </div>
         <div>
-          <p className="text-justify">
+          <p
+            className="text-justify"
+            data-aos="fade-down-right"
+            data-aos-duration="2000"
+          >
             Over the years, we have navigated through various milestones and
             challenges, each one shaping us into the dynamic organization we are
             today. Through strategic partnerships, investments in cutting-edge

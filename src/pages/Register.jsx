@@ -41,7 +41,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="py-4">
+    <div className="py-4 font-alegreya">
       <Helmet>
         <title>Axis Commercial | Register</title>
       </Helmet>
