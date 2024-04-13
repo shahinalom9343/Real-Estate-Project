@@ -15,43 +15,81 @@ const Banner = () => {
       navigation={true}
       loop={true}
       modules={[Navigation]}
-      className="mySwiper mb-6"
+      className="mySwiper mb-6 text-center"
     >
-      <SwiperSlide>
-        <div className="slide slide1 flex flex-col">
-          <h3 className="text-5xl font-bold text-white">
-            Corporate Headquarters
-          </h3>
-          <p className="text-2xl font-semibold text-white">
-            Elevate your corporate identity with our prestigious headquarters.
-            Designed to embody sophistication and efficiency....
-          </p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="slide slide2  flex flex-col">
-          <h3 className="text-5xl font-bold text-white">
-            Entertainment Complex
-          </h3>
-          <p className="text-2xl text-center px-10 font-semibold text-white">
-            Immerse yourself in an unforgettable entertainment experience at our
-            state-of-the-art complex. Designed to cater to a diverse range of
-            entertainment preferences, this venue is a hub of excitement and
-            activity....
-          </p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="slide slide3  flex flex-col">
-          <h3 className="text-5xl font-bold text-orange-500">
-            Fine Dining Restaurant
-          </h3>
-          <p className="text-2xl text-center px-10 font-semibold text-white">
-            Indulge your senses in a culinary journey like no other at our fine
-            dining restaurant. Nestled in an elegant setting...
-          </p>
-        </div>
-      </SwiperSlide>
+      <div className="rounded-lg">
+        {" "}
+        <SwiperSlide>
+          <div
+            className="hero min-h-screen"
+            style={{
+              backgroundImage:
+                "url(https://www.boyercompany.com/wp-content/uploads/2022/02/Weave-Lehi-utah-real-estate-boyer-company.jpg)",
+            }}
+          >
+            <div className="hero-overlay bg-opacity-70"></div>
+            <div className="hero-content text-center text-neutral-content ">
+              <div className="max-w-xl font-alegreya">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Corporate Headquarters
+                </h1>
+                <p className="mb-5">
+                  Elevate your corporate identity with our prestigious
+                  headquarters. Designed to embody sophistication and
+                  efficiency, the ..
+                </p>
+                <button className="btn btn-primary">See More</button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="hero min-h-screen"
+            style={{
+              backgroundImage:
+                "url(https://minteerteam.com/wp-content/uploads/2022/03/EVO-Entertainment-Center.jpg)",
+            }}
+          >
+            <div className="hero-overlay bg-opacity-70"></div>
+            <div className="hero-content text-center text-neutral-content">
+              <div className="max-w-xl font-alegreya">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Entertainment Complex
+                </h1>
+                <p className="mb-5">
+                  Immerse yourself in an unforgettable entertainment experience
+                  at our state-of-the-art complex. Designed to cater to a di ..
+                </p>
+                <button className="btn btn-primary">See More</button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="hero min-h-screen"
+            style={{
+              backgroundImage:
+                "url(https://res.cloudinary.com/trends-publishing/image/upload/s--o4nDHKFY--/c_scale,dpr_2.0,g_center,w_320/e_anti_removal:10,g_south_east,l_trends_watermark,o_70,w_50,x_10,y_10/f_auto,q_auto:best/0057741.jpg)",
+            }}
+          >
+            <div className="hero-overlay bg-opacity-70"></div>
+            <div className="hero-content text-center text-neutral-content">
+              <div className="max-w-xl font-alegreya">
+                <h1 className="mb-5 text-5xl font-bold">
+                  Fine Dining Restaurant
+                </h1>
+                <p className="mb-5">
+                  Indulge your senses in a culinary journey like no other at our
+                  fine dining restaurant. Nestled in an elegant setting wit ...
+                </p>
+                <button className="btn btn-primary">See More</button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </div>
     </Swiper>
   );
 };

@@ -1,12 +1,27 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Team = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="my-6 border-2 border-violet-600 rounded-xl">
+    <div
+      className="my-6 border-2 border-violet-600 rounded-xl font-alegreya"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <section className="py-6 dark:bg-gray-100 dark:text-gray-800">
         <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
           <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">
             Our team
           </h1>
-          <p className="max-w-2xl text-center dark:text-gray-600">
+          <p
+            className="max-w-2xl text-center dark:text-gray-600"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+          >
             We are always on the lookout for the next great fit for our team!
             Here are ten great reasons why you should consider a career with Mad
             City Dream commercial aspects. Here we are always for you.

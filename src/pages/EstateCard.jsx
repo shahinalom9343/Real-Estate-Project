@@ -15,8 +15,8 @@ const EstateCard = ({ singleEstate }) => {
     location,
   } = singleEstate;
   return (
-    <div className="animate__animated animate__fadeInUp">
-      <div className="card card-compact w-full  bg-red-200 transition duration-300 ease-in-out hover:scale-105">
+    <div className="animate__animated animate__fadeInUp font-alegreya">
+      <div className="card card-compact w-full  bg-red-100 transition duration-300 ease-in-out hover:scale-105 h-96">
         <figure>
           <img className="h-52 w-full" src={image} alt={estate_name} />
         </figure>
@@ -26,7 +26,7 @@ const EstateCard = ({ singleEstate }) => {
           <div>
             <p>
               {description.slice(0, 120)} ..{" "}
-              <button className="text-sm text-fuchsia-700 font-bold">
+              <button className="text-sm text-fuchsia-500 font-bold">
                 See more
               </button>
             </p>
@@ -45,7 +45,7 @@ const EstateCard = ({ singleEstate }) => {
           <div>
             <Link
               to={`/estate/${id}`}
-              className="btn btn-accent text-white w-full font-semibold text-base"
+              className="btn btn-success text-white w-full font-semibold text-base"
             >
               View Property
             </Link>

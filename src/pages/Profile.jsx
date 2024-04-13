@@ -1,8 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../provider/AuthProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Profile = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { user } = useContext(AuthContext);
   return (
     <div>
@@ -15,13 +20,23 @@ const Profile = () => {
             src={user.photoURL}
             alt={user.displayName}
             className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+            data-aos="zoom-out-right"
+            data-aos-duration="1500"
           />
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold sm:text-2xl">
+              <h2
+                className="text-xl font-semibold sm:text-2xl"
+                data-aos="zoom-out-left"
+                data-aos-duration="1500"
+              >
                 {user.displayName}
               </h2>
-              <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+              <p
+                className="px-5 text-xs sm:text-base dark:text-gray-600"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
                 {user.email}
               </p>
             </div>

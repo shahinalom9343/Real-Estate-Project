@@ -150,15 +150,18 @@ const Login = () => {
             <FaGithub></FaGithub>
           </button>
         </div>
-        <p className="text-xs text-center sm:px-6 dark:text-gray-600">
-          Do not have an account? Please
-          <Link
-            to="/register"
-            className="underline dark:text-green-600 font-bold text-sm"
-          >
-            Register
-          </Link>
-        </p>
+        <div className="text-xs text-center sm:px-6 dark:text-gray-600 flex justify-around">
+          <div className="text-base">New Here?</div>
+          <div className="text-base">
+            Please{" "}
+            <Link
+              to="/register"
+              className="underline dark:text-green-600 text-red-700 font-bold"
+            >
+              Register
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

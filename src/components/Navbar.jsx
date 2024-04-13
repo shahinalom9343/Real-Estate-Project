@@ -21,6 +21,9 @@ const Navbar = () => {
         <NavLink to="/profile">User Profile</NavLink>
       </li>
       <li>
+        <NavLink to="/update">Update Profile</NavLink>
+      </li>
+      <li>
         <NavLink to="/contact">Contact</NavLink>
       </li>
     </>

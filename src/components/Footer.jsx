@@ -3,7 +3,7 @@ import { FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer px-6 py-2 lg:px-16 lg:py-6 bg-black bg-opacity-65 text-white bottom-0">
+      <footer className="footer px-6 py-2 lg:px-16 lg:py-6 bg-black bg-opacity-65 text-white bottom-0 font-alegreya">
         <nav>
           <h5 className="footer-title">Services</h5>
           <a className="link link-hover">Branding</a>
