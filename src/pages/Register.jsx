@@ -13,7 +13,7 @@ const Register = () => {
     AOS.init();
   }, []);
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser } = useContext(AuthContext);
+  const { createUser, logOut } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -35,6 +35,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast("User Created Successfully !!!");
+        logOut();
       })
       .catch((error) => {
         console.error(error);

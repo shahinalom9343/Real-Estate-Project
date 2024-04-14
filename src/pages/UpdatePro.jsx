@@ -2,15 +2,26 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const UpdatePro = () => {
-  const { user, updateUserProfile } = useContext(AuthContext);
+  const { user, updateUserProfile, createUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  //   console.log(user);
-  const updateUser = () => {
-    updateUserProfile(user.displayName, user.photoURL).then(() => {
-      navigate(location?.state ? location.state : "/");
+  console.log(user);
+
+  // update the user
+  const updateUser = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const photoURL = form.get("photoURL");
+    console.log(name, photoURL);
+    createUser(name, photoURL).then(() => {
+      updateUserProfile(user.displayName, user.photoURL).then(() => {
+        navigate(location?.state || "/");
+      });
+      toast("updated successfully");
     });
   };
   return (
@@ -62,6 +73,7 @@ const UpdatePro = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
