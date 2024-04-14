@@ -28,7 +28,8 @@ const UpdatePro = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder={user.displayName}
+                  placeholder="Update your name"
+                  defaultValue={user.displayName}
                   className="input input-bordered"
                 />
               </div>
@@ -38,7 +39,8 @@ const UpdatePro = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder={user.email}
+                  placeholder="Email"
+                  defaultValue={user.email}
                   className="input input-bordered"
                 />
               </div>
@@ -48,7 +50,8 @@ const UpdatePro = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder={user.photoURL}
+                  defaultValue={user.photoURL}
+                  placeholder="Update your photoURL"
                   className="input input-bordered"
                 />
               </div>
